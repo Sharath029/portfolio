@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+nuxt-dist/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and cache
+*.log
+npm-debug.log*
+.cache/
+.parcel-cache/
+
+# Optional: uncomment if you prefer not to commit the PDF (host elsewhere)
+# Sharath-cv.pdf
