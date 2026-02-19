@@ -26,7 +26,6 @@ The site is recruiter-focused, ATS-friendly, and responsive.
 - **Frontend:** HTML5, CSS3, JavaScript (vanilla)
 - **Fonts:** DM Sans, JetBrains Mono (Google Fonts)
 - **Hosting:** GitHub Pages (static)
-- **Optional:** Docker + nginx for local or self-hosted deployment
 
 ---
 
@@ -34,16 +33,14 @@ The site is recruiter-focused, ATS-friendly, and responsive.
 
 ```
 portfolio/
-├── index.html              # Main portfolio page
-├── Sharath-Resume-Content.html  # Resume (print to PDF)
-├── Sharath-cv.pdf          # Resume PDF (download)
-├── favicon.svg             # Site icon
+├── index.html                  # Main portfolio page
+├── Sharath-Resume-Content.html # Resume (print to PDF)
+├── Sharath-cv.pdf              # Resume PDF (download)
+├── favicon.svg                 # Site icon
 ├── css/
-│   └── styles.css          # Styles
+│   └── styles.css              # Styles
 ├── js/
-│   └── script.js           # Navigation, smooth scroll, form
-├── nginx.conf              # nginx config (Docker)
-├── Dockerfile              # Optional Docker build
+│   └── script.js               # Navigation, smooth scroll
 └── README.md
 ```
 
