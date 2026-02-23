@@ -3,107 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sharath S Naik – Resume</title>
+  <title>Sharath S Naik - Resume - Senior Cloud Security DevSecOps Engineer</title>
   <style>
     body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.4; max-width: 8.5in; margin: 0 auto; padding: 0.5in; color: #000; }
     h1 { font-size: 18pt; margin: 0 0 4px; font-weight: bold; }
     .subtitle { font-size: 10pt; color: #333; margin: 0 0 8px; }
-    .contact { font-size: 10pt; margin: 0 0 14px; }
+    .contact { font-size: 10pt; margin: 0 0 14px; line-height: 1.5; }
     h2 { font-size: 12pt; font-weight: bold; margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.5px; }
     p, ul { margin: 0 0 5px; }
-    ul { padding-left: 20px; }
+    ul { padding-left: 20px; list-style-type: disc; }
     li { margin-bottom: 2px; }
-    .job-title { font-weight: bold; font-size: 11pt; }
+    .job-title { font-weight: bold; font-size: 11pt; display: block; }
+    .job-meta { font-size: 10pt; margin-bottom: 4px; }
     .company { font-weight: bold; }
-    .dates { font-size: 11pt; }
-    .job-meta { margin-bottom: 2px; }
-    .job-context { font-size: 10pt; color: #555; font-style: italic; margin-bottom: 5px; }
     .updated { font-size: 10pt; margin-top: 14px; text-align: right; color: #666; }
-    .declaration { font-size: 9.5pt; color: #555; margin-top: 10px; font-style: italic; }
-    .save-pdf { font-size: 9pt; color: #666; margin-bottom: 10px; padding: 8px 12px; background: #f5f5f5; border-radius: 4px; }
+    .save-pdf { font-size: 9pt; color: #666; margin-bottom: 10px; }
+    .skills-grid { margin: 4px 0 10px; }
+    .skills-grid p { margin: 0 0 3px; font-size: 10.5pt; }
     @media print { body { padding: 0.4in; } .save-pdf { display: none; } }
   </style>
 </head>
 <body>
-  <p class="save-pdf">To save as PDF: use your browser’s <strong>Print</strong> (Ctrl+P or Cmd+P) and choose <strong>Save as PDF</strong> or <strong>Microsoft Print to PDF</strong>.</p>
-  <h1>SHARATH S NAIK</h1>
-  <p class="subtitle">Senior Cloud Security &amp; DevSecOps Engineer | AWS &amp; Azure</p>
-  <p class="contact">Email: sharathnaik.contact@gmail.com | Phone: +91-8296237529 | LinkedIn: https://linkedin.com/in/sharath029 | Location: Bengaluru, India</p>
+  <p class="save-pdf">Save as PDF: Print (Ctrl+P or Cmd+P), then choose Save as PDF.</p>
+
+  <h1>Sharath S Naik</h1>
+  <p class="subtitle">Senior Cloud Security &amp; DevSecOps Engineer</p>
+  <p class="contact">
+    Bengaluru, India<br />
+    sharathnaik.contact@gmail.com | +91-8296237529<br />
+    linkedin.com/in/sharath029
+  </p>
 
   <h2>Professional Summary</h2>
-  <p>Senior Cloud Security and DevSecOps Engineer with 3+ years taking end-to-end ownership of complex, critical initiatives on AWS and Azure. I modernize legacy systems and deliver secure, scalable, audit-ready platforms for internal and customer environments (e.g., Kenvue, Vision Care JNJ). I lead CI/CD and tooling modernization (Jenkins, SonarQube LTA migrations), SOC2 readiness, ISO 27001 compliance, and technical SPOC for customer audits (e.g., Larimer). I ensure zero downtime during deployments and migrations, often as weekend/off-hours SPOC to protect GTM timelines. I drive FinOps (up to 50% cost reduction), Zero Trust, supply chain security (Cosign), and platform reliability with Kubernetes, Terraform, and Prometheus/Grafana. I invest in KT sessions, reusable documentation, and mentoring to improve DevOps maturity.</p>
+  <p>Cloud Security &amp; DevSecOps Engineer with 3+ years of experience securing and scaling AWS and Azure environments. Specialized in Kubernetes (EKS/AKS), Terraform-based Infrastructure as Code, CI/CD security automation (SAST/DAST), IAM governance, and Zero Trust architecture. Improved security posture through AWS Security Hub, Azure Defender, and SIEM integrations while optimizing cloud spend by 50%. Experienced in SOC 2 and ISO 27001 compliance, audit automation, and secure Platform Engineering practices.</p>
 
   <h2>Technical Skills</h2>
-  <p><strong>Cloud:</strong> AWS (IAM, EC2, EKS, VPC, S3, Route 53, CloudWatch, CloudTrail, KMS, SSM, SNS, SQS, ELB, ECR, SES), Azure (AKS, RBAC, NSG, Storage)</p>
-  <p><strong>Infrastructure as Code:</strong> Terraform, Ansible</p>
-  <p><strong>Containers:</strong> Docker, Kubernetes, Helm</p>
-  <p><strong>CI/CD:</strong> Jenkins, AWS CodePipeline, CodeBuild, CodeDeploy, Bitbucket Pipelines</p>
-  <p><strong>Security &amp; Scanning:</strong> Trivy, SonarQube, OWASP ZAP, Dependency-Track, Kubescape</p>
-  <p><strong>Monitoring:</strong> Prometheus, Grafana, AWS CloudWatch</p>
-  <p><strong>Compliance:</strong> ISO 27001, MITRE ATT&amp;CK, SOC2</p>
-  <p><strong>Languages &amp; Scripting:</strong> Python, Bash, Shell</p>
-  <p><strong>Other:</strong> Linux (Amazon Linux, Ubuntu), Microservices, TCP/IP, DNS, Load Balancers, TLS/SSL, MySQL, PostgreSQL</p>
+  <div class="skills-grid">
+    <p><strong>Cloud Platforms:</strong> AWS, Azure</p>
+    <p><strong>Compute &amp; Containers:</strong> Kubernetes, EKS, AKS, Docker, Helm</p>
+    <p><strong>Infrastructure as Code:</strong> Terraform, CloudFormation, Ansible</p>
+    <p><strong>CI/CD &amp; GitOps:</strong> Jenkins, GitHub Actions, GitLab CI, AWS CodePipeline, ArgoCD</p>
+    <p><strong>Cloud Security:</strong> IAM, AWS Security Hub, GuardDuty, CloudTrail, AWS WAF, Azure Defender, Azure Sentinel, Zero Trust</p>
+    <p><strong>Application Security:</strong> SAST, DAST, SonarQube, OWASP ZAP, Trivy</p>
+    <p><strong>Compliance Frameworks:</strong> SOC 2, ISO 27001, CIS Benchmarks, NIST</p>
+    <p><strong>Secrets &amp; Key Management:</strong> HashiCorp Vault, Secrets Management, AWS KMS</p>
+    <p><strong>Monitoring &amp; SIEM:</strong> Prometheus, Grafana, CloudWatch, ELK, SIEM</p>
+    <p><strong>FinOps:</strong> Cost Governance, Budget Monitoring, Resource Optimization</p>
+    <p><strong>Languages:</strong> Python, Bash</p>
+  </div>
 
   <h2>Professional Experience</h2>
 
-  <p class="job-meta"><span class="job-title">Senior Cloud Security and DevOps Engineer</span> | <span class="company">Mareana, Inc.</span> | <span class="dates">March 2023 – Present</span></p>
-  <p class="job-context">Manufacturing Intelligence (MI) Product on AWS</p>
+  <p class="job-title">Senior Cloud Security &amp; DevSecOps Engineer</p>
+  <p class="job-meta"><span class="company">Mareana, Inc.</span> | Mar 2023 – Present | AWS</p>
   <ul>
-    <li><strong>Security &amp; Compliance Audits:</strong> Spearheaded enterprise SOC2 readiness and maintained ISO 27001 compliance. Acted as the primary technical SPOC for rigorous customer audits (e.g., Larimer), ensuring 100% compliance by enforcing strict RBAC, maintaining comprehensive audit logs, and automating evidence collection. Published monthly vulnerability scan summary across all environments for security team review.</li>
-    <li><strong>Cloud FinOps Leadership:</strong> Architected and executed cloud cost-optimization strategies, achieving a 50% reduction in monthly cloud spend. Automated decommissioning of orphaned EC2 instances, EKS node groups, and unattached storage while enforcing right-sizing across all environments.</li>
-    <li><strong>Software Supply Chain Security:</strong> Hardened release pipelines by implementing Cosign-based Docker image signing, ensuring only verified and scanned images were promoted to production.</li>
-    <li><strong>Zero Trust &amp; Identity Management:</strong> Designed and deployed centralized SAML IdP integration across the platform, unifying authentication and strictly enforcing least-privilege access across multi-account AWS environments.</li>
-    <li><strong>Tooling Modernization:</strong> Led enterprise-wide migration of legacy CI/CD infrastructure: SonarQube 10.7 → 2025.3 LTA and Jenkins to v2.516.3 LTA, remediating critical plugin vulnerabilities and improving static code analysis. Established standardized, reusable GitOps pipelines and documented deployment steps in the knowledge base.</li>
-    <li><strong>AIADP &amp; Compliance-as-Code:</strong> Designed cloud-native deployment architecture aligned with AIADP principles. Maintained SOC2 control checklist for DevOps pipelines with monthly evidence collection of audit logs, access, and scans.</li>
-    <li><strong>Risk &amp; Incident Response:</strong> Proactively identified and resolved security risks (e.g., compromised resources) before customer impact. Ensured zero downtime for critical environments during deployments, migrations, and patching; acted as SPOC for weekend and off-hours support to protect customer commitments and GTM timelines.</li>
+    <li>Strengthened AWS IAM governance across multi-account architecture using AWS Organizations and AWS Config, decreasing privilege sprawl by 30%.</li>
+    <li>Consolidated AWS Security Hub, GuardDuty, and CloudTrail findings into centralized dashboards, improving threat visibility and compliance tracking.</li>
+    <li>Configured AWS WAF managed rules and rate controls to secure public-facing workloads from OWASP Top 10 vulnerabilities.</li>
+    <li>Engineered Terraform-based landing zones aligned with CIS Benchmarks and NIST controls, accelerating provisioning cycles from days to under 2 hours.</li>
+    <li>Embedded SAST and DAST security gates into Jenkins pipelines, cutting critical vulnerabilities in production by 35%.</li>
+    <li>Hardened EKS clusters using RBAC, Network Policies, OPA/Kyverno admission controls, and signed container image validation.</li>
+    <li>Supported Vault-based Secrets Management implementation for dynamic credential rotation in CI/CD workflows.</li>
+    <li>Contributed to Incident Response procedures by analyzing SIEM alerts and coordinating remediation workflows.</li>
+    <li>Optimized infrastructure utilization through automated FinOps workflows, reducing monthly AWS spend by 50%.</li>
+    <li>Enabled audit readiness for SOC 2 and ISO 27001 through automated evidence generation and compliance-as-code validation.</li>
   </ul>
 
-  <p class="job-meta"><span class="job-title">Senior Cloud Security and DevOps Engineer</span> | <span class="company">Johnson &amp; Johnson (JNJ) – Client Engagement</span> | <span class="dates">March 2023 – Present</span></p>
-  <p class="job-context">Manufacturing Intelligence (MI) Product on Azure</p>
+  <p class="job-title">Senior Cloud Security &amp; DevSecOps Engineer</p>
+  <p class="job-meta"><span class="company">Johnson &amp; Johnson (Client Engagement)</span> | Mar 2023 – Present | Azure</p>
   <ul>
-    <li><strong>Zero-Downtime Deployments:</strong> Engineered blue/green deployment architectures using Helm and Kubernetes, guaranteeing zero downtime during application migrations, security patching, and infrastructure upgrades.</li>
-    <li><strong>Continuous Security Integration:</strong> Built DevSecOps pipeline integrating Trivy, OWASP ZAP, and AWS Inspector. Enforced automated security gates that prevented deployment of critical CVEs and reduced policy violations by 35%.</li>
-    <li><strong>Observability &amp; SLA Management:</strong> Deployed centralized monitoring using Prometheus and Grafana with Email and Slack notifications. Configured automated alerting for latency breaches and system degradation, reducing incident MTTR to under 2 hours; integrated log forwarding for shared dashboards with role-based access.</li>
-    <li><strong>Infrastructure as Code:</strong> Automated provisioning of multi-tenant environments using Terraform and Ansible, shrinking infrastructure delivery time by 40%. Enabled Terraform validate and AWS Config checks in the pipeline to catch misconfigurations.</li>
-    <li><strong>Multitenant &amp; Demo Readiness:</strong> Deployed and validated multitenant-ready infrastructure modules (Terraform/Helm) across Dev and QA. Supported MI Demo v2, Demo v3, Sandbox, and Vision Care environments with 99%+ uptime; implemented RBAC and access logs for pre-sales demo accounts. Automated reusable customer environment bootstrap to complete provisioning within &lt; 2 hours.</li>
-    <li><strong>Team Enablement:</strong> Mentored cross-functional teams, conducted KT sessions on Jenkins migration, DevSecOps, SAML, and compliance. Authored reusable documentation for CI/CD, environment setup, and audits; delivered internal recaps to promote adoption.</li>
+    <li>Delivered secure AKS environments using Helm-driven blue/green deployment strategies, ensuring uninterrupted releases.</li>
+    <li>Leveraged Azure Defender and Azure Sentinel for centralized SIEM monitoring and proactive threat detection.</li>
+    <li>Integrated SAST, DAST, and container security scanning into CI/CD workflows using Jenkins and GitHub Actions, lowering security violations by 33%.</li>
+    <li>Implemented Azure RBAC and Zero Trust access policies for multi-tenant workloads.</li>
+    <li>Automated Terraform-based environment provisioning, improving deployment efficiency by 40%.</li>
+    <li>Established observability stack using Prometheus and Grafana, maintaining MTTR under 2 hours.</li>
+    <li>Participated in Threat Modeling sessions during new service design and architecture reviews.</li>
   </ul>
 
-  <p class="job-meta"><span class="job-title">Senior Cloud Security and DevOps Engineer</span> | <span class="company">Kenvue – Client Engagement</span> | <span class="dates">March 2023 – Present</span></p>
-  <p class="job-context">Manufacturing Intelligence (MI) Product on Azure</p>
+  <p class="job-title">Senior Cloud Security &amp; DevSecOps Engineer</p>
+  <p class="job-meta"><span class="company">Kenvue (Client Engagement)</span> | Mar 2023 – Present | Azure</p>
   <ul>
-    <li><strong>Zero-Downtime Deployments:</strong> Engineered blue/green deployment architectures using Helm and Kubernetes for zero downtime during migrations and security patching.</li>
-    <li><strong>Continuous Security Integration:</strong> Built DevSecOps pipeline with Trivy, OWASP ZAP, and AWS Inspector; reduced policy violations by 35%.</li>
-    <li><strong>Observability &amp; SLA Management:</strong> Deployed Prometheus and Grafana with automated alerting; reduced incident MTTR to under 2 hours.</li>
-    <li><strong>Infrastructure as Code:</strong> Automated multi-tenant provisioning with Terraform and Ansible; 40% faster infrastructure delivery.</li>
-    <li><strong>FinOps &amp; Cost Optimization:</strong> Reduced cloud costs by 50% through storage management, automated clean-ups, and right-sizing of compute resources.</li>
-    <li><strong>Container &amp; Platform Onboarding:</strong> Delivered container-based, Kubernetes-ready deployments for Kenvue Lab Scheduler across Dev, QA, and Prod; designed and implemented the same reference architecture for DMFM and GTAG environments, enabling modernized, platform-ready service onboarding.</li>
-    <li><strong>Customer Continuity:</strong> Ensured zero downtime for Kenvue environments during deployments, migrations, patching, and security upgrades, protecting customer business continuity and maintaining secure, compliant environments aligned with audit expectations.</li>
-    <li><strong>Team Enablement:</strong> Mentored teams during migrations, audits, and critical delivery phases; conducted KT sessions and created reusable documentation for CI/CD and environment setup.</li>
+    <li>Built hardened AKS container platforms with secure image lifecycle management and compliance controls.</li>
+    <li>Implemented GitOps workflows using ArgoCD to automate Kubernetes deployments with rollback capabilities.</li>
+    <li>Standardized Infrastructure as Code modules to support Platform Engineering self-service environments.</li>
+    <li>Introduced cost governance automation across storage and compute services, lowering cloud expenditure by 50%.</li>
+    <li>Sustained zero-downtime patch management and audit-compliant configurations across environments.</li>
   </ul>
 
-  <h2>Key Projects &amp; Impact</h2>
+  <h2>Key Initiatives</h2>
+  <p><strong>DevSecOps Modernization</strong></p>
   <ul>
-    <li><strong>Automated DevSecOps Pipeline (Reduced Deployment Time by 60%):</strong> AWS CodePipeline, Jenkins, SonarQube, Trivy, Terraform. 60% faster deployments; automated security scanning and supply chain security; only verified, signed images promoted to production.</li>
-    <li><strong>Cloud FinOps &amp; Cost Optimization (50% Reduction in Cloud Spend):</strong> AWS Cost Explorer, Terraform, custom automation. Achieved 50% reduction in monthly cloud spend through automated decommissioning of orphaned EC2, EKS nodes, and unattached storage; enforced right-sizing across environments.</li>
-    <li><strong>Multi-Account AWS Security Guardrails (35% Fewer Policy Violations):</strong> Python, Boto3, IAM, AWS Config. 50+ custom guardrails across multi-account AWS; 35% reduction in policy violations; Zero Trust and least-privilege enforcement.</li>
-    <li><strong>Centralized Observability &amp; SLA Management (MTTR under 2 Hours):</strong> Prometheus, Grafana, CloudWatch. 30% alert noise reduction; SLO-based dashboards; automated alerting for latency and degradation; incident MTTR under 2 hours.</li>
+    <li>Developed enterprise CI/CD framework integrating Terraform, Kubernetes, SAST, DAST, and supply chain validation.</li>
+    <li>Increased deployment velocity by 60% while preserving security compliance.</li>
+  </ul>
+  <p><strong>Security &amp; Compliance Automation</strong></p>
+  <ul>
+    <li>Implemented CIS Benchmark alignment and NIST-based control mapping.</li>
+    <li>Enhanced compliance visibility through SIEM integration and centralized logging.</li>
+  </ul>
+  <p><strong>FinOps Optimization</strong></p>
+  <ul>
+    <li>Automated idle resource detection and policy enforcement.</li>
+    <li>Reduced operational waste while maintaining SLA commitments.</li>
   </ul>
 
-  <h2>Certifications and Achievements</h2>
+  <h2>Certifications</h2>
   <ul>
     <li>AWS Certified Solutions Architect – In Progress</li>
     <li>Certified Kubernetes Administrator (CKA) – In Progress</li>
-    <li>Terraform Associate – Infrastructure as Code – In Progress</li>
-    <li>Awarded ACE Alliance for outstanding contributions to Cloud and DevOps automation.</li>
+    <li>Terraform Associate – In Progress</li>
   </ul>
-  <p><strong>Events &amp; Continuous Learning:</strong> Global GenAI Bootcamp – Bengaluru, Snowflake World Tour 2025, Thoughtworks XConf 2025, Redis events, CloudKeeper.</p>
 
   <h2>Education</h2>
-  <p>Bachelor of Engineering (B.E.) | BIT, Visvesvaraya Technological University | 2022 | CGPA: 7.86</p>
-
-  <h2>Declaration</h2>
-  <p class="declaration">I hereby declare that the information provided above is true and correct to the best of my knowledge.</p>
+  <p>Bachelor of Engineering (B.E.)</p>
+  <p>Visvesvaraya Technological University | 2022</p>
 
   <p class="updated">Last Updated: February 20, 2026</p>
 </body>
