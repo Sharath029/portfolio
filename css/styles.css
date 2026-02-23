@@ -1,22 +1,26 @@
-/* Sharath S Naik – Portfolio | Clean, professional */
+/* Sharath S Naik – Portfolio | Clean, professional, visually refined */
 
 :root {
-  --bg: #16181d;
-  --bg-card: #1c1f26;
-  --bg-alt: #21242c;
-  --border: rgba(255, 255, 255, 0.07);
-  --border-light: rgba(255, 255, 255, 0.1);
-  --text: #eaecef;
-  --text-muted: #8b9099;
+  --bg: #14161b;
+  --bg-card: #1a1d24;
+  --bg-alt: #1e2129;
+  --border: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-accent: rgba(91, 156, 244, 0.25);
+  --text: #eceef1;
+  --text-muted: #8f95a0;
   --accent: #5b9cf4;
+  --accent-secondary: #8b7cf8;
   --accent-soft: rgba(91, 156, 244, 0.12);
+  --glow: rgba(91, 156, 244, 0.2);
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --radius: 10px;
-  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-sm: 8px;
   --header-h: 64px;
   --container: min(880px, 92vw);
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--border-light);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -37,7 +41,23 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(91, 156, 244, 0.06), transparent 50%);
+  background:
+    radial-gradient(ellipse 100% 60% at 50% -15%, rgba(91, 156, 244, 0.08), transparent 55%),
+    radial-gradient(ellipse 70% 40% at 100% 30%, rgba(139, 124, 248, 0.05), transparent 50%),
+    radial-gradient(ellipse 60% 35% at 0% 70%, rgba(91, 156, 244, 0.04), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 15%, transparent 75%);
   pointer-events: none;
   z-index: 0;
 }
@@ -58,8 +78,9 @@ body::before {
   right: 0;
   height: var(--header-h);
   z-index: 100;
-  background: rgba(22, 24, 29, 0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(20, 22, 27, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -92,9 +113,23 @@ body::before {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  transition: width 0.25s ease;
 }
 
 .nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
 
 .nav-toggle {
   display: none;
@@ -138,11 +173,13 @@ body::before {
 
 /* ===== HERO ===== */
 .hero {
-  padding: calc(var(--header-h) + 3rem) 0 3.5rem;
+  padding: calc(var(--header-h) + 3.5rem) 0 4rem;
+  position: relative;
 }
 
 .hero-inner {
   max-width: 640px;
+  position: relative;
 }
 
 .hero-greeting {
@@ -153,19 +190,24 @@ body::before {
 }
 
 .hero-name {
-  font-size: clamp(1.9rem, 4.5vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
   margin: 0 0 0.5rem;
   color: var(--text);
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-headline {
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 600;
   color: var(--accent);
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.4rem;
+  text-shadow: 0 0 40px var(--glow);
 }
 
 .hero-subtext {
@@ -217,24 +259,29 @@ body::before {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #4a8ae8 100%);
   color: #fff;
+  box-shadow: 0 4px 16px var(--glow);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-primary:hover {
-  background: #3a8eef;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--glow), 0 0 32px rgba(91, 156, 244, 0.15);
   color: #fff;
 }
 
 .btn-secondary {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
   color: var(--text);
   border: 1px solid var(--border);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .btn-secondary:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -251,11 +298,14 @@ body::before {
 }
 
 .section-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.4rem);
   font-weight: 700;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
   color: var(--text);
   letter-spacing: -0.02em;
+  border-bottom: 2px solid var(--accent);
+  width: fit-content;
 }
 
 /* ===== SNAPSHOT ===== */
@@ -270,11 +320,23 @@ body::before {
   display: flex;
   gap: 0.5rem;
   font-size: 0.95rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+
+.snapshot-row:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .snapshot-key {
   color: var(--text-muted);
   flex-shrink: 0;
+  font-size: 0.9rem;
 }
 
 .snapshot-val {
@@ -332,13 +394,36 @@ body::before {
 
 /* ===== EXPERIENCE ===== */
 .exp-block {
-  padding: 1.75rem 1.5rem;
+  padding: 1.75rem 1.75rem;
   margin-bottom: 1.25rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
 }
+
+.exp-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.exp-block:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.exp-block:hover::before { opacity: 1; }
 
 .exp-block:last-child { margin-bottom: 0; }
 
@@ -389,23 +474,40 @@ body::before {
 }
 
 .project-item {
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 0.75rem;
+  padding: 1.35rem 1.6rem;
+  margin-bottom: 0.85rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .project-item:hover {
-  border-color: var(--border-light);
-  box-shadow: var(--shadow);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
+
+.project-item:hover::before { opacity: 1; }
 
 .project-item:last-child { margin-bottom: 0; }
 
 .project-name {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 600;
   color: var(--text);
   margin: 0 0 0.5rem;
@@ -440,8 +542,9 @@ body::before {
 
 /* ===== CONTACT (high visibility) ===== */
 .contact {
-  background: var(--bg-alt);
+  background: linear-gradient(180deg, var(--bg-alt) 0%, rgba(30, 33, 41, 0.95) 100%);
   padding: 3.5rem 0;
+  border-top: 1px solid var(--border);
 }
 
 .contact-cta {
@@ -449,6 +552,7 @@ body::before {
   font-weight: 600;
   color: var(--accent);
   margin: 0 0 1.25rem;
+  text-shadow: 0 0 24px var(--glow);
 }
 
 .contact-block {
@@ -497,10 +601,16 @@ body::before {
   margin: 0;
   font-size: 0.95rem;
   color: var(--text-muted);
-  padding: 1rem 1.25rem;
+  padding: 1.1rem 1.4rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.edu-line:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 520px) {
